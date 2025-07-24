@@ -76,7 +76,7 @@ async def convert_image(update: Update, context: CallbackContext):
 def main():
     import dotenv
     dotenv.load_dotenv()
-    token = os.getenv("BOT_TOKEN", "8419872381:AAGNWrPQkhOJ4QEmttB4luE7kVdqHLT7SnA")
+    token = os.getenv("BOT_TOKEN", "")
     app = Application.builder().token(token).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(set_language, pattern="^lang_"))
